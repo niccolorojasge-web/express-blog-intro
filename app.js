@@ -5,10 +5,7 @@ const port = 3000;
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.send("<h1>server del mio blog</h1>")
-})
-app.listen(port, () => {
-    console.log(`example app listening on port ${port}`);
+    res.send("<h1>server del mio blog</h1>");
 });
 app.get('/bacheca',(req, res)=>{
 //settiamo dati bacheca
@@ -21,7 +18,7 @@ app.get('/bacheca',(req, res)=>{
   {
     titolo: "cracker-barbabietola",
     contenuto: "I cracker alla barbabietola sono uno snack croccante e colorato, ideale come alternativa sana ai cracker classici.",
-    immagine: "images/cracker_barbabietola",
+    immagine: "images/cracker_barbabietola.jpeg",
     tags: ["snack", "barbabietola", "salato"]
   },
   {
@@ -39,12 +36,12 @@ app.get('/bacheca',(req, res)=>{
   {
     titolo: "torta paesana  ",
     contenuto: "La torta paesana è un dolce rustico lombardo a base di pane, cacao e frutta secca.",
-    immagine: "images/torta_paesana",
+    immagine: "images/torta_paesana.jpeg",
     tags: ["dolce", "tradizionale", "forno"]
   }
 ];
 //ritorno res bacheca 
-res.json(bacheca)
+res.json(bacheca);
 })
 app.listen(port,()=>{
 console.log(`example app listening on port ${port}`); 
